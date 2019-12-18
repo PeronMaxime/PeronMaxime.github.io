@@ -159,3 +159,7 @@ li a {
 #section_contact p {
     display: block;
 }
+
+#section_contact a{
+    color: black;
+}

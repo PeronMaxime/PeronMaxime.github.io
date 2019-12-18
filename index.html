@@ -7,15 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     
-    <script src="js/page.js"></script>
-    <script src="js/objets/prototypes/personnage.js"></script>
-    <script src="js/main.js"></script>
 </head>
 <body>
     <header>
-        <h1>Stick Man Shooter</h1>
+        <h1>Maxime Péron - Développeur fullstack Javascript</h1>
     </header>
-
+    
     <nav>
         <ul>
             <li><a id="revenirJeu">Revenir au jeu</a></li>
@@ -24,9 +21,9 @@
             <li><a id="afficherContact">Contact</a></li>
         </ul>
     </nav>
-
+    
     <canvas id="section_jeu"></canvas>
-
+    
     <section id="section_regle">
         <p>Règles du jeu</p>
         <p>Pour déplacer Stickman, utilisez les touches Q et D pour aller de droite à gauche, et la touche espace pour sauter</p>
@@ -36,12 +33,12 @@
         <p>Attention tout de même, si un zombie vous touche, vous avez perdu</p>
         <a href='#' id="jouer">JOUER</a>
     </section>
-
+    
     <section id="section_game_over">
         <p>Game Over</p>
         <a href="#" id ="reessayer">Rééssayer</a>
     </section>
-
+    
     <section id="section_cv">
         <div id="img_cv">
             <div id="filtre_cv">
@@ -49,16 +46,32 @@
             </div>
         </div>
     </section>
-
+    
     <section id="section_contact">
         <p>Péron Maxime</p>
         <p>Adresse email : maximeperon08@gmail.com</p>
-        <p>linkedin : <a onclick="linkedin();">linkedin.maximeperon.fr</a></p>
+        <p>linkedin : <a href="http://linkedin.maximeperon.fr">linkedin.maximeperon.fr</a></p>
+        <p>Github : <a href="http://github.maximeperon.fr">github.maximeperon.fr</a></p>
     </section>
 
+    <section>
+        <audio src="sound/gun.mp3" id="son_gun"></audio>
+        <audio src="sound/zombie.mp3" id="son_zombie"></audio>
+    </section>
+    
     <footer>
-
+        
     </footer>
     
+    <script src="js/page.js"></script>
+    <script src="js/objets/cadre.js"></script>
+    <script src="js/objets/prototypes/personnage.js"></script>
+    <script src="js/objets/stickman.js"></script>
+    <script src="js/objets/viseur.js"></script>
+    <script src="js/objets/balle.js"></script>
+    <script src="js/objets/pnj.js"></script>
+    <script src="js/objets/bonus.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/event.js"></script>
 </body>
 </html>

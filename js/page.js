@@ -5,7 +5,6 @@ addEventListener('load', function(){
     var afficherCv = document.getElementById('afficherCv');
     var rechargerPage = document.getElementById('rechargerPage');
     var revenirJeu = document.getElementById('revenirJeu');
-    var linkedin = document.getElementById('linkedin');
     var jouer = document.getElementById('jouer');
     var sectionRegle = document.getElementById('section_regle');
     var sectionGameOver = document.getElementById('section_game_over');
@@ -66,10 +65,6 @@ addEventListener('load', function(){
             sectionContact.style.display = 'none';
             sectionCv.style.display = 'none';
         }
-    }
-    
-    linkedin = function(){
-        open('http://linkedin.maximeperon.fr', 'linkedin');
     }
 
 });

@@ -1,5 +1,5 @@
 // Récupération des sons
-var sonGun = document.getElementById('gun');
+var sonGun = document.getElementById('son_gun');
 var sectionJeu = document.getElementById('section_jeu');
 
 document.addEventListener('keypress',function(e){
