@@ -256,9 +256,11 @@ addEventListener('load', function(){
 });    
 
 // Code
-// Afficher une page avec un CV et un bouton pour télécharger le PDF
 // Zombie aléatoire
-// Compatibilité Mozilla
+// Problème de chargement
+// Ajouter les logos au fur et à mesure qu'on les débloque
+// Page de contact
+// Son mort et son mrot zombie
 
 // Dessin
 // Amélioration sprite bonus

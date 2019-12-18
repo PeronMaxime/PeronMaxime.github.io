@@ -6,10 +6,12 @@
 body {
     font-family: ActionMan;
     user-select: none;
+    background-color: lightslategray;
 }
 
 h1 {
     text-align: center;
+    color: orange;
 }
 
 nav {
@@ -29,7 +31,7 @@ nav li {
 }
 
 li a {
-    color: black;
+    color: orange;
     text-decoration: none;
 }
 
@@ -39,6 +41,7 @@ li a {
 
 #section_jeu {
     border: 1px solid black;
+    border-radius: 10px;
     display: none;
     position: relative;
     background-image: url('../img/background.jpg');
@@ -48,7 +51,9 @@ li a {
 }
 
 #section_regle{
+    background-color: rgb(123, 101, 143);
     border: 1px solid black;
+    border-radius: 10px;
     display: block;
     height: 500px;
     position: relative;
@@ -59,9 +64,9 @@ li a {
 }
 
 #section_regle a{
-    border: 1px solid black;
+    border: 1px solid orange;
     border-radius: 50px;
-    color: black;
+    color: orange;
     display: flex;
     flex-direction: column;
     height: 100px;
@@ -73,19 +78,69 @@ li a {
 }
 
 #section_game_over{
+    background-color: rgb(123, 101, 143);
     border: 1px solid black;
+    border-radius: 10px;
     display: none;
     height: 500px;
     position: relative;
     width: 100%;
 }
 
+#section_game_over p{
+    color: red;
+    font-size: 42px;
+    text-align: center;
+}
+
+#section_game_over a{
+    border: 1px solid orange;
+    border-radius: 50px;
+    color: orange;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+}
+
 #section_cv{
-    border: 1px solid black;
     display: none;
-    height: 500px;
+    justify-content: center;
+}
+
+#img_cv{
+    position: absolute;
+    width: 619px;
+    height: 877px;
+    background-image: url("../img/cv.jpg");
+    background-size: cover;
+}
+
+#filtre_cv{
+    display: none;
+    background-color: black;
+    height: 877px;
+}
+
+#filtre_cv p{
+    border: 1px solid orange;
+    border-radius: 50px;
+    color: orange;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+    margin: auto;
     position: relative;
-    width: 100%;
+    top: 400px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+
 }
 
 /************************************************************
@@ -94,6 +149,7 @@ li a {
 
 #section_contact {
     border: 1px solid black;
+    border-radius: 10px;
     display: none;
     height: 500px;
     position: relative;

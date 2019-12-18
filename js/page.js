@@ -11,10 +11,27 @@ addEventListener('load', function(){
     var sectionGameOver = document.getElementById('section_game_over');
     var reessayer = document.getElementById('reessayer');
     var sectionCv = document.getElementById('section_cv');
+    var imageCv = document.getElementById('img_cv');
+    var filtreCv = document.getElementById('filtre_cv');
 
     sectionContact.style.display = 'none';
     sectionGameOver.style.display = 'none';
     sectionCv.style.display = 'none';
+    sectionJeu.style.display = 'none';
+
+    imageCv.onclick = function(){
+        open('pdf/CV.pdf');
+    }
+
+    imageCv.onmouseover = function(){
+        filtreCv.style.opacity = '0.6';
+        filtreCv.style.display = "block";
+    }
+
+    imageCv.onmouseleave = function(){
+        filtreCv.style.opacity = '1';
+        filtreCv.style.display = "none";
+    }
     
     jouer.onclick = function(){
         sectionJeu.style.display = 'block';
@@ -26,7 +43,7 @@ addEventListener('load', function(){
     }
 
     afficherCv.onclick = function(){
-        sectionCv.style.display = 'block';
+        sectionCv.style.display = 'flex';
         sectionJeu.style.display = 'none';
         sectionContact.style.display = 'none';
         sectionRegle.style.display = 'none';

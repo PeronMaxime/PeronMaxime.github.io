@@ -1,5 +1,6 @@
 // Récupération des sons
 var sonGun = document.getElementById('gun');
+var sectionJeu = document.getElementById('section_jeu');
 
 document.addEventListener('keypress',function(e){
     switch (e.keyCode){
@@ -47,16 +48,18 @@ document.addEventListener('mousemove', function(e){
 });
 
 document.addEventListener('click', function(){
-    if(balle.canShoot){
-        sonGun.play();
-        setTimeout(function(){
-            balle.canShoot = true;
-        },1000);
-        viseur.sourisXFixe = viseur.sourisX;
-        viseur.sourisYFixe = viseur.sourisY;
-        balle.canShoot = false;
-        balle.x = stickman.destinationX+stickman.gunX;
-        balle.y = stickman.destinationY+stickman.gunY;
-        balle.animation = true;
+    if(sectionJeu.style.display != 'none'){
+        if(balle.canShoot){
+            sonGun.play();
+            setTimeout(function(){
+                balle.canShoot = true;
+            },1000);
+            viseur.sourisXFixe = viseur.sourisX;
+            viseur.sourisYFixe = viseur.sourisY;
+            balle.canShoot = false;
+            balle.x = stickman.destinationX+stickman.gunX;
+            balle.y = stickman.destinationY+stickman.gunY;
+            balle.animation = true;
+        }
     }
 });

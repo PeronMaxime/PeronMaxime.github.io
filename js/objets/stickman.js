@@ -31,9 +31,11 @@ Stickman.prototype.updateStickman = function(droite, gauche, jump){
     // On change la sourceY du sprite pour avoir la position droite ou gauche de stickman en fonction de la position de la souris.
     if(viseur.sourisX<=stickman.destinationX){
         stickman.sourceY = stickman.hauteur;
+        stickman.persoX = 50;
     }
     else if(viseur.sourisX>=stickman.destinationX+stickman.largeur*stickman.agrandissement){
         stickman.sourceY = 0;
+        stickman.persoX = 0;
     }
     
     // On change la sourceY du sprite et la vitesse de déplacement en fonction de si l'animation est droite ou gauche
