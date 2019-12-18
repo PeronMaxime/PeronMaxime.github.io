@@ -151,6 +151,7 @@ li a {
     border: 1px solid black;
     border-radius: 10px;
     display: none;
+
     height: 500px;
     position: relative;
     width: 100%;
@@ -158,6 +159,8 @@ li a {
 
 #section_contact p {
     display: block;
+    font-size: 28px;
+    text-align: center;
 }
 
 #section_contact a{
