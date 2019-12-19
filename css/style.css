@@ -6,6 +6,9 @@
 body {
     font-family: ActionMan;
     user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     background-color: lightslategray;
 }
 

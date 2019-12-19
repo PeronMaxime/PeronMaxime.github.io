@@ -194,7 +194,6 @@ addEventListener('load', function(){
             return;
             
         }
-        console.log('ceci est un test, vas te faire');
 
         requestAnimationFrame(loopDraw);
     }
