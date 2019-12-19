@@ -107,6 +107,22 @@ li a {
     width: 100px;
 }
 
+#section_win{
+    background-color: rgb(123, 101, 143);
+    border: 1px solid black;
+    border-radius: 10px;
+    display: none;
+    height: 500px;
+    position: relative;
+    width: 100%;
+}
+
+#section_win p{
+    color: green;
+    font-size: 42px;
+    text-align: center;
+}
+
 #section_cv{
     display: none;
     justify-content: center;
@@ -151,7 +167,6 @@ li a {
     border: 1px solid black;
     border-radius: 10px;
     display: none;
-
     height: 500px;
     position: relative;
     width: 100%;

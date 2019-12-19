@@ -12,11 +12,13 @@ addEventListener('load', function(){
     var sectionCv = document.getElementById('section_cv');
     var imageCv = document.getElementById('img_cv');
     var filtreCv = document.getElementById('filtre_cv');
+    var sectionWin = document.getElementById('section_win');
 
     sectionContact.style.display = 'none';
     sectionGameOver.style.display = 'none';
     sectionCv.style.display = 'none';
     sectionJeu.style.display = 'none';
+    sectionWin.style.display = 'none';
 
     imageCv.onclick = function(){
         open('pdf/CV.pdf');

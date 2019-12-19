@@ -3,6 +3,7 @@ addEventListener('load', function(){
     var sectionRegle = document.getElementById('section_regle');
     var sectionContact = document.getElementById('section_contact');
     var sectionGameOver = document.getElementById('section_game_over');
+    var sectionWin = document.getElementById('section_win');
     var sectionCv = document.getElementById('section_cv');
     var sectionJeu = document.getElementById('section_jeu');
     var sonZombie = document.getElementById('son_zombie');
@@ -73,7 +74,7 @@ addEventListener('load', function(){
     balle.y = stickman.destinationY+stickman.gunY;
 
     var zombieTue = 0;
-    var nombreBonus = 0;       
+    var nombreBonusObtenus = 0;       
 
     
     // Fonction principal d'animation
@@ -88,10 +89,12 @@ addEventListener('load', function(){
 
         // Update et dessin de la balle
         if(balle.animation){
-            if(balle.update(zombie, compteurZombie, bonus) == 1){
+            var returnBalle = balle.update(zombie, compteurZombie, bonus, nombreBonusObtenus);
+            if(returnBalle == 1){
                 zombieTue++;
-                console.log(bonus);
-                console.dir(bonus);
+            }
+            else if(returnBalle == 2){
+                nombreBonusObtenus++;
             }
             balle.draw();
         }
@@ -123,69 +126,75 @@ addEventListener('load', function(){
                 if(bonus[9]!=''){
                     bonus[9].debloque = true;
                     bonus[9].drawBonus(spriteBonus);
-                    bonus[9].updateBonus(spriteBonus);
+                    bonus[9].updateBonus();
                 } 
             case zombieTue>=45:
                 if(bonus[8]!=''){
                     bonus[8].debloque = true;
                     bonus[8].drawBonus(spriteBonus);
-                    bonus[8].updateBonus(spriteBonus);
+                    bonus[8].updateBonus();
                 } 
             case zombieTue>=40:
                 if(bonus[7]!=''){
                     bonus[7].debloque = true;
                     bonus[7].drawBonus(spriteBonus);
-                    bonus[7].updateBonus(spriteBonus);
+                    bonus[7].updateBonus();
                 } 
             case zombieTue>=35:
                 if(bonus[6]!=''){
                     bonus[6].debloque = true;
                     bonus[6].drawBonus(spriteBonus);
-                    bonus[6].updateBonus(spriteBonus);
+                    bonus[6].updateBonus();
                 } 
             case zombieTue>=30:
                 if(bonus[5]!=''){
                     bonus[5].debloque = true;
                     bonus[5].drawBonus(spriteBonus);
-                    bonus[5].updateBonus(spriteBonus);
+                    bonus[5].updateBonus();
                 } 
             case zombieTue>=25:
                 if(bonus[4]!=''){
                     bonus[4].debloque = true;
                     bonus[4].drawBonus(spriteBonus);
-                    bonus[4].updateBonus(spriteBonus);
+                    bonus[4].updateBonus();
                 } 
             case zombieTue>=20:
                 if(bonus[3]!=''){
                     bonus[3].debloque = true;
                     bonus[3].drawBonus(spriteBonus);
-                    bonus[3].updateBonus(spriteBonus);
+                    bonus[3].updateBonus();
                 } 
             case zombieTue>=15:
                 if(bonus[2]!=''){
                     bonus[2].debloque = true;
                     bonus[2].drawBonus(spriteBonus);
-                    bonus[2].updateBonus(spriteBonus);
+                    bonus[2].updateBonus();
                 } 
             case zombieTue>=10:
                 if(bonus[1]!=''){
                     bonus[1].debloque = true;
                     bonus[1].drawBonus(spriteBonus);
-                    bonus[1].updateBonus(spriteBonus);                                  
+                    bonus[1].updateBonus();                                  
                 }    
             case zombieTue>=5:
                 if(bonus[0]!=''){
                     bonus[0].debloque = true;
                     bonus[0].drawBonus(spriteBonus);
-                    bonus[0].updateBonus(spriteBonus);
+                    bonus[0].updateBonus();
                 }
-
                 break;
         }
-        if(bonus[9] == ""){
-            sectionCv.style.display = 'flex';
+        if(nombreBonusObtenus == 10){
+            sectionWin.style.display = 'block';
             sectionJeu.style.display = 'none';
+            setTimeout(function(){
+                sectionCv.style.display = 'flex';
+                sectionWin.style.display = 'none';
+            }, 2000);
+            return;
+            
         }
+        console.log('ceci est un test, vas te faire');
 
         requestAnimationFrame(loopDraw);
     }
@@ -196,8 +205,6 @@ addEventListener('load', function(){
 
 // Code
 // Zombie aléatoire
-// Ajouter les logos au fur et à mesure qu'on les débloque
-// Page de contact
 // Son mort et son mort zombie
 
 // Dessin

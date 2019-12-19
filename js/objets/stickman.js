@@ -96,7 +96,6 @@ Stickman.prototype.updateStickman = function(droite, gauche, jump){
             
             // Si stickman revient à sa position initiale alors on réinitialise les sources du sprite, on quitte la phase descendante et on quitte l'animation du saut
             if(stickman.destinationY >= cadre.hauteur-stickman.hauteur*stickman.agrandissement){
-                stickman.sourceY = 0;
                 stickman.sourceX = 0;
                 stickman.jumpDown = false;
                 stickman.animationJump = false;
