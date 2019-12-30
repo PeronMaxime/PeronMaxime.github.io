@@ -48,6 +48,7 @@ addEventListener('load', function(){
         sectionJeu.style.display = 'none';
         sectionContact.style.display = 'none';
         sectionRegle.style.display = 'none';
+        sectionGameOver.style.display = 'none';
     }
     
     rechargerPage.onclick = function(){
